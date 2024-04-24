@@ -4,9 +4,7 @@ public interface MyList<T> {
 
     boolean contains(Object o);
 
-
     void add(T item);
-
 
     void add(T item, int index);
 

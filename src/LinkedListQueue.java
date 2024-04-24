@@ -1,6 +1,6 @@
 import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.NoSuchElementException; // importing main utils.
+import java.util.NoSuchElementException;
 
 public class LinkedListQueue<T> implements ListForQueue<T>, Iterable<T> {
     private LinkedList<T> linkedList;
