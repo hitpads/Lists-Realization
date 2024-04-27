@@ -94,8 +94,16 @@ public class MyArrayList<T> implements MyList<T> {
 
     @Override
     public void sort() {
-        // Implement sorting algorithm
-        // For simplicity, let's assume it's already sorted
+        for (int i = 1; i < size; i++) {
+            T key = (T) elements[i];
+            int j = i - 1;
+
+            while (j >= 0 && ((T) elements[j]).compareTo(key) > 0) {
+                elements[j + 1] = elements[j];
+                j--;
+            }
+            elements[j + 1] = key;
+        }
     }
 
     @Override
