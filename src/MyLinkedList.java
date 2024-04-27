@@ -1,7 +1,9 @@
+package src;
+
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class MyLinkedList<T> implements MyList<T> {
+public class MyLinkedList<T extends Comparable<T>> implements MyList<T> {
     private class MyNode {
         T data;
         MyNode next;
@@ -163,9 +165,30 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public void sort() {
-        // Implement sorting algorithm
-        // For simplicity, let's assume it's already sorted
-    }
+        if (head == null || head.next == null) {
+            return;
+        }
+            boolean swapped;
+            MyLinkedList<T>.MyNode node;
+
+            if (head == null)
+                return;
+
+            do {
+                swapped = false;
+                node = head;
+
+                while (node.next != null) {
+                    if (node.data.compareTo(node.next.data) > 0) {
+                        T t = node.next.data;
+                        node.next.data = node.data;
+                        node.data = t;
+                        swapped = true;
+                    }
+                    node = node.next;
+                }
+            } while (swapped);
+        }
 
     @Override
     public int indexOf(Object object) {
@@ -257,7 +280,7 @@ public class MyLinkedList<T> implements MyList<T> {
         return current;
     }
 
-    private boolean isEmpty() {
+    boolean isEmpty() {
         return size == 0;
     }
 
