@@ -1,27 +1,20 @@
-public interface MyList<T> {
-
-    int size();
-
-    boolean contains(Object o);
-
+public interface MyList<T> extends Iterable<T> {
     void add(T item);
-
-    void add(T item, int index);
-
-    void remove1(T item);
-
-    void remove(int index);
-
-    void clear();
-
+    void set(int index, T item);
+    void add(int index, T item);
+    void addFirst(T item);
+    void addLast(T item);
     T get(int index);
-
-    int indexOf(Object o);
-
-    int lastIndexOf(Object o);
-
+    T getFirst();
+    T getLast();
+    void remove(int index);
+    void removeFirst();
+    void removeLast();
     void sort();
-
-    void checkIndex(int index);
-
+    int indexOf(Object object);
+    int lastIndexOf(Object object);
+    boolean exists(Object object);
+    Object[] toArray();
+    void clear();
+    int size();
 }
