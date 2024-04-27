@@ -1,5 +1,6 @@
 package src;
 
+// This class is made to test the implementation of the data structures and list interfaces & methods
 public class Main {
     public static void main(String[] args) {
         testMyArrayList();
