@@ -1,7 +1,7 @@
 **Project: Data Structures Implementation**
 
 **Description:**
-This project is an implementation of various data structures in Java, including linked list (`MyLinkedList`), array list (`MyArrayList`), stack (`MyStack`), queue (`MyQueue`), and min heap (`MyMinHeap`). Each data structure is created from scratch, providing an opportunity to understand the concepts and algorithms involved.
+This project is an implementation of data structures in Java, including linked list, array list, stack, queue, and min heap. Each data structure is created from scratch, providing an opportunity to understand the concepts and algorithms in it.
 
 **Classes:**
 1. `MyLinkedList`: Implements a doubly linked list with methods for adding, removing, and accessing elements.
