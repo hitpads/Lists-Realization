@@ -23,7 +23,7 @@ class MyStack<T> {
     // peek at the element at the top of the stack without removing it
     public T peek() {
         if (empty()) {
-            throw new IllegalStateException("stack empty");
+            throw new IllegalStateException("empty stack");
         }
         return top.data;
     }
@@ -39,7 +39,7 @@ class MyStack<T> {
     // pop and return the element at the top of the stack
     public T pop() {
         if (empty()) {
-            throw new IllegalStateException("stack empty");
+            throw new IllegalStateException("empty stack");
         }
         T data = top.data;
         top = top.next;

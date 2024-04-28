@@ -22,7 +22,7 @@ class MyQueue<T> {
         return size;
     }
 
-    // Peek at the element at the front of the queue without removing it
+    // peek at the element at the front of the queue without removing it
     public T peek() {
         if (isEmpty()) {
             throw new IllegalStateException("queue is empty");
@@ -30,7 +30,7 @@ class MyQueue<T> {
         return front.data;
     }
 
-    // Add an element to the rear of the queue
+    // add an element to the rear of the queue
     public void enqueue(T data) {
         Node<T> newNode = new Node<>(data);
         if (isEmpty()) {
